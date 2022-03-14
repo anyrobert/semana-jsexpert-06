@@ -9,20 +9,20 @@ const {
 } = config;
 
 export class Service {
-  createFileStream(filename) {
-    return fs.createReadStream(filename);
+  createFileStream(filepath) {
+    return fs.createReadStream(filepath);
   }
 
-  async getFileInfo(file) {
-    const fullPath = join(publicPath, file);
+  async getFileInfo(filename) {
+    const fullPath = join(publicPath, filename);
     await access(fullPath);
-    const fileType = extname(filfullPathe);
+    const fileType = extname(fullPath);
 
     return { type: fileType, name: fullPath };
   }
 
-  async getFileStream(file) {
-    const { name, type } = await this.getFileInfo(file);
+  async getFileStream(filename) {
+    const { name, type } = await this.getFileInfo(filename);
     return {
       stream: this.createFileStream(name),
       type,
