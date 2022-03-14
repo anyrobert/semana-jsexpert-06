@@ -1,0 +1,24 @@
+{
+  "name": "semanajsexpert-06",
+  "version": "0.0.1",
+  "description": "Seja bem vindo(a) à sexta Semana Javascript Expert. Este é o código inicial para iniciar nossa jornada.",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickWendel/semanajsexpert-spotify-template.git"
+  },
+  "keywords": [],
+  "author": "Robert Gabriel <anyrobert@outlook.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickWendel/semanajsexpert-spotify-template/issues"
+  },
+  "homepage": "https://github.com/ErickWendel/semanajsexpert-spotify-template#readme"
+}
