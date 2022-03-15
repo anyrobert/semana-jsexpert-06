@@ -1,7 +1,7 @@
 import config from "./config.js";
 
 import fs from "fs";
-import { access } from "fs/promises";
+import fsPromises from "fs/promises";
 import { extname, join } from "path";
 
 const {
@@ -15,7 +15,7 @@ export class Service {
 
   async getFileInfo(filename) {
     const fullPath = join(publicPath, filename);
-    await access(fullPath);
+    await fsPromises.access(fullPath);
     const fileType = extname(fullPath);
 
     return { type: fileType, name: fullPath };
