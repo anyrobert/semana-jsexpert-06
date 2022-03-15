@@ -10,9 +10,9 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
+    "test": "LOG_DISABLED=true NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
     "test:watch": "npm run test -- --watch",
-    "test:coverage": "npm run test -- --coverage tests/unit"
+    "test:ci": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
